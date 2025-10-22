@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: URL_BASE,
     images: [
       {
-        url: "https://susoku.edelbyte.com.ar/sudoku.webp",
+        url: "https://susoku.edelbyte.com.ar/sudoku.jpg",
         width: 1200,
         height: 630,
         alt: "Juego de Sudoku | Sudoku Game",
