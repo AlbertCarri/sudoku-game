@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button"
 import { RotateCcw, X } from "lucide-react"
 import type { Difficulty } from "@/lib/sudoku"
-import ToggleDark from "./ThemeToggle"
 
 interface GameControlsProps {
   errors: number
@@ -33,9 +32,6 @@ export function GameControls({ errors, difficulty, onNewGame, onQuit, gameOver, 
           <div className="px-4 py-2 bg-card rounded-lg border border-border">
             <span className="text-sm text-muted-foreground">Nivel: </span>
             <span className="font-semibold text-foreground">{difficultyLabels[difficulty]}</span>
-          </div>
-          <div>
-            <ToggleDark/>
           </div>
         </div>
       </div>

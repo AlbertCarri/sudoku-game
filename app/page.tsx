@@ -7,6 +7,7 @@ import { GameControls } from "@/components/game-controls"
 import { ConfirmModal } from "@/components/confirm-modal"
 import { DifficultySelector } from "@/components/difficulty-selector"
 import { generatePuzzle, isValidPlacement, isBoardComplete, type GameBoard, type Difficulty } from "@/lib/sudoku"
+import ToggleDark from "@/components/ThemeToggle"
 
 export default function SudokuGame() {
   const [difficulty, setDifficulty] = useState<Difficulty | null>(null)
@@ -163,7 +164,7 @@ export default function SudokuGame() {
 
   return (
     <div className="min-h-screen flex items-center justify-center p-2 bg-background">
-      <div className="w-full max-w-2xl space-y-2">
+      <div className="w-full max-w-2xl space-y-1">
         <h1 className="text-3xl md:text-4xl font-bold text-center text-foreground">Sudoku</h1>
 
         <GameControls
@@ -174,7 +175,7 @@ export default function SudokuGame() {
           gameOver={gameOver}
           gameWon={gameWon}
         />
-
+        <ToggleDark/>
         <SudokuBoard board={board} selectedCell={selectedCell} onCellClick={handleCellClick} />
 
         <NumberPad
